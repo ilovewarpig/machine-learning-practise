@@ -1,3 +1,6 @@
+'''
+CNN模型，使用预训练后的模型，可用于在小数据集上训练高质量模型
+'''
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
@@ -72,6 +75,7 @@ if __name__ == '__main__':
         else:
             test_y.append(0)
 
+    # 划分训练集和验证集
     validation_dir = train_dir[int(len(train_dir) * 0.75):len(train_dir)]
     validation_y = train_y[int(len(train_y) * 0.75):len(train_y)]
     train_dir = train_dir[:int(len(train_dir) * 0.75)]
@@ -85,6 +89,7 @@ if __name__ == '__main__':
     reshaped_x_validation = validation_x.reshape(-1, 150, 150, 3)
     reshaped_x_train = train_x.reshape(-1, 150, 150, 3)
 
+    # 数据增强
     train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
         rescale=1. / 255,
         rotation_range=40,
@@ -101,10 +106,12 @@ if __name__ == '__main__':
     validation_generator = train_datagen.flow(reshaped_x_validation, validation_y, batch_size=32)
     test_generator = test_datagen.flow(reshaped_x_test, test_y, batch_size=32)
 
+    # 获取VGG16
     conv_base = VGG16(weights='imagenet', include_top=False, input_shape=(150, 150, 3))
     conv_base.trainable = False
     model = Sequential()
     model.add(conv_base)
+    # 添加分类器
     model.add(Flatten())
     model.add(Dropout(0.5))
     model.add(Dense(128, activation='relu'))
