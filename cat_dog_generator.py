@@ -1,3 +1,6 @@
+'''
+简单CNN模型，使用generator 进行批处理，减缓内存压力，但增加了计算量
+'''
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
