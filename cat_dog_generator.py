@@ -58,7 +58,7 @@ if __name__ == '__main__':
         if '_' not in i:
             train_dir.append('C:\\Users\\Leo-Li\\Downloads\\cat-and-dog\\training_set\\dogs\\' + i)
 
-        # 随机打乱
+    # 随机打乱
     random.shuffle(train_dir)
     random.shuffle(test_dir)
 
@@ -92,6 +92,7 @@ if __name__ == '__main__':
     reshaped_x_validation = validation_x.reshape(-1, 150, 150, 3)
     reshaped_x_train = train_x.reshape(-1, 150, 150, 3)
 
+    # 数据增强
     train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
         rescale=1./255,
         rotation_range=40,
@@ -104,6 +105,7 @@ if __name__ == '__main__':
     validation_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1. / 255)
     test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1. / 255)
 
+    # 创建训练集、验证集和测试集的生成器
     train_generator = train_datagen.flow(reshaped_x_train, train_y, batch_size=32)
     validation_generator = train_datagen.flow(reshaped_x_validation, validation_y, batch_size=32)
     test_generator = test_datagen.flow(reshaped_x_test, test_y, batch_size=32)
