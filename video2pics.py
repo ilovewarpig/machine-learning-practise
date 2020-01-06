@@ -5,7 +5,6 @@ import sys
 
 def video2pics(input_path):
     # input_path = sys.argv[1]  # 第一个输入参数是包含视频片段的路径
-    # input_path = "C:\\Users\\ilovewarpig\\Desktop\\breadboard"  # 第一个输入参数是包含视频片段的路径
     # frame_interval = int(sys.argv[2])  # 第二个输入参数是设定每隔多少帧截取一帧
     frame_interval = 10  # 第二个输入参数是设定每隔多少帧截取一帧
     filenames = os.listdir(input_path)  # 列出文件夹下所有的视频文件
