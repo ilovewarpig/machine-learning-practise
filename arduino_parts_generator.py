@@ -77,8 +77,8 @@ def crop_pics_rgb(sets):
 # 测试函数，输出3行4列的图片并写上预测结果
 def test(model):
     test_dir = []
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test_pics'):
-            test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test_pics\\' + i)
+    for i in os.listdir('.\\test_pics'):
+            test_dir.append('.\\test_pics\\' + i)
     mytest = crop_pics_rgb(test_dir)
 
     reshaped_mytest = mytest.reshape(-1, 150, 150, 3)
@@ -144,12 +144,12 @@ if __name__ == '__main__':
     # 读取图片文件路径
     item_list = ['breadboard', 'buzzer', 'fire', 'hoare', 'joystick', 'mainchip', 'motor', 'relay', 'steering', 'ultrasonic']
     for item in item_list:
-        for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\{}_frames_highQ'.format(item)):
-            test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\{}_frames_highQ\\'.format(item) + i)
+        for i in os.listdir('.\\test\\{}_frames_highQ'.format(item)):
+            test_dir.append('.\\test\\{}_frames_highQ\\'.format(item) + i)
 
     for item in item_list:
-        for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\{}_frames_highQ'.format(item)):
-            train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\{}_frames_highQ\\'.format(item) + i)
+        for i in os.listdir('.\\train\\{}_frames_highQ'.format(item)):
+            train_dir.append('.\\train\\{}_frames_highQ\\'.format(item) + i)
     
     # 随机打乱
     random.shuffle(train_dir)
