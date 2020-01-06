@@ -2,14 +2,14 @@ import cv2
 import os
 import sys
 
-# input_path = sys.argv[1]  # 第一个输入参数是包含视频片段的路径
-def video2pics(input_path):
 
+def video2pics(input_path):
+    # input_path = sys.argv[1]  # 第一个输入参数是包含视频片段的路径
     # input_path = "C:\\Users\\ilovewarpig\\Desktop\\breadboard"  # 第一个输入参数是包含视频片段的路径
     # frame_interval = int(sys.argv[2])  # 第二个输入参数是设定每隔多少帧截取一帧
     frame_interval = 10  # 第二个输入参数是设定每隔多少帧截取一帧
     filenames = os.listdir(input_path)  # 列出文件夹下所有的视频文件
-
+    print(filenames)
     video_prefix = input_path.split(os.sep)[-1]  # 获取文件夹名称
     frame_path = '{}_frames_highQ'.format(input_path)  # 新建文件夹，名称为原名加上_frames
     if not os.path.exists(frame_path):
@@ -37,6 +37,7 @@ def video2pics(input_path):
 
 
 if __name__ == '__main__':
-    names = ['breadboard', 'mainchip']
-    for item in names:
-        video2pics('C:\\Users\\ilovewarpig\\Desktop\\{}'.format(item))
+    item_list = ['motordrive', 'LCD', 'lithiumbattery', 'batterybox', 'smallmotor', 'jumper', 'datawire',
+                 'electriciron', 'resistor', 'capacitance', 'LED']
+    for item in item_list:
+        print('.\\arduino_videos\\{}'.format(item))
