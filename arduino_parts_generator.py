@@ -145,11 +145,11 @@ if __name__ == '__main__':
     item_list = ['breadboard', 'buzzer', 'fire', 'hoare', 'joystick', 'mainchip', 'motor', 'relay', 'steering', 'ultrasonic']
     for item in item_list:
         for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\{}_frames_highQ'.format(item)):
-            print('C:\\Users\\ilovewarpig\\Desktop\\test\\{}_frames_highQ\\'.format(item) + i)
+            test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\{}_frames_highQ\\'.format(item) + i)
 
     for item in item_list:
         for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\{}_frames_highQ'.format(item)):
-            print('C:\\Users\\ilovewarpig\\Desktop\\train\\{}_frames_highQ\\'.format(item) + i)
+            train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\{}_frames_highQ\\'.format(item) + i)
     
     # 随机打乱
     random.shuffle(train_dir)
