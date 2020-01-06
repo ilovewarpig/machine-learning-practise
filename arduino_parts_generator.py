@@ -150,67 +150,7 @@ if __name__ == '__main__':
     for item in item_list:
         for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\{}_frames_highQ'.format(item)):
             print('C:\\Users\\ilovewarpig\\Desktop\\train\\{}_frames_highQ\\'.format(item) + i)
-    '''        
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\breadboard_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\breadboard_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\buzzer_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\buzzer_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\fire_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\fire_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\hoare_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\hoare_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\joystick_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\joystick_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\mainchip_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\mainchip_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\motor_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\motor_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\relay_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\relay_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\steering_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\steering_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\test\\ultrasonic_frames_highQ'):
-        test_dir.append('C:\\Users\\ilovewarpig\\Desktop\\test\\ultrasonic_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\breadboard_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\breadboard_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\buzzer_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\buzzer_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\fire_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\fire_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\hoare_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\hoare_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\joystick_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\joystick_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\mainchip_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\mainchip_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\motor_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\motor_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\relay_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\relay_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\steering_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\steering_frames_highQ\\' + i)
-
-    for i in os.listdir('C:\\Users\\ilovewarpig\\Desktop\\train\\ultrasonic_frames_highQ'):
-        train_dir.append('C:\\Users\\ilovewarpig\\Desktop\\train\\ultrasonic_frames_highQ\\' + i)
-    '''
+    
     # 随机打乱
     random.shuffle(train_dir)
     random.shuffle(test_dir)
